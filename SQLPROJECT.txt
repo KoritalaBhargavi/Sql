@@ -1,4 +1,4 @@
-PROJECT 1:
+PROJECT 1: MULTIPLE TABLES
 
 1.Let’s examine the three tables.
 SELECT * FROM trips;
@@ -72,7 +72,7 @@ LIMIT 2;
 
 
 
-PROJECT 2:
+PROJECT 2: MANIPULATION
 
 1.Create a table named friends with three columns:
 id that stores INTEGER
