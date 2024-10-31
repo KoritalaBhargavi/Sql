@@ -1,6 +1,6 @@
 --->PREDEFINED FUNCTIONS:
-->1)numeric functions:
- 1.abs():
+-->1)numeric functions:
+ ---->1.abs():
 SELECT 
     order_id, 
     item, 
@@ -8,7 +8,7 @@ SELECT
     ABS(amount - 50) AS productcost
 FROM 
    orders;
-2.mod():
+---->2.mod():
 SELECT 
     order_id, 
     item, 
@@ -16,7 +16,7 @@ SELECT
     MOD(amount, 300) AS remainder
 FROM 
     Orders;
-3.sqrt():
+---->3.sqrt():
 SELECT 
     order_id, 
     item, 
@@ -24,7 +24,7 @@ SELECT
     SQRT(amount) AS sqrt_amount
 FROM 
     Orders;
-4.power():
+---->4.power():
 SELECT 
     order_id, 
     item, 
@@ -32,7 +32,7 @@ SELECT
     POWER(amount, 2) AS amount_squared
 FROM 
     Orders;
-5.ciel():
+---->5.ciel():
 SELECT 
     order_id, 
     item, 
@@ -40,7 +40,7 @@ SELECT
     CEIL(amount) AS rounded_up_amount
 FROM 
     Orders;
-6.floor():
+---->6.floor():
 SELECT 
     order_id, 
     item, 
@@ -48,7 +48,7 @@ SELECT
     FLOOR(amount) AS rounded_down_amount
 FROM 
     Orders;
-7.round:
+---->7.round:
 SELECT 
     order_id, 
     item, 
@@ -56,7 +56,7 @@ SELECT
     ROUND(amount, 0) AS rounded_amount
 FROM 
     Orders;
-8.log():
+---->8.log():
 SELECT 
     order_id, 
     item, 
@@ -65,7 +65,7 @@ SELECT
     LEAST(amount, 1000) AS min_value
 FROM 
     Orders;
-9.ln():
+---->9.ln():
 SELECT 
     order_id, 
     item, 
@@ -73,7 +73,7 @@ SELECT
     LN(amount) AS natural_log
 FROM 
     Orders;
-10.exp():
+---->10.exp():
 SELECT 
     order_id, 
     item, 
@@ -81,7 +81,7 @@ SELECT
     EXP(amount) AS exp_amount
 FROM 
     Orders;
-11.factorail():
+---->11.factorail():
 SELECT 
     order_id, 
     item, 
@@ -89,7 +89,7 @@ SELECT
     FACTORIAL(amount) AS factorial_amount
 FROM 
     Orders;
-12.sign():
+---->12.sign():
 SELECT 
     order_id, 
     item, 
@@ -99,8 +99,8 @@ FROM
     Orders;
 
 
-->2)string functions:
-1.concat():
+---->2)string functions:
+---->1.concat():
 SELECT 
     shipping_id, 
     status, 
@@ -108,7 +108,7 @@ SELECT
     CONCAT(status, ' - Customer ', customer) AS status_customer
 FROM 
     Shippings;
-2.substr():
+---->2.substr():
 SELECT 
     shipping_id, 
     status, 
@@ -116,7 +116,7 @@ SELECT
     SUBSTRING(status, 1, 3) AS status_prefix
 FROM 
     Shippings;
-3.length():
+---->3.length():
 SELECT 
     shipping_id, 
     status, 
@@ -124,7 +124,7 @@ SELECT
     LENGTH(status) AS status_length
 FROM 
     Shippings;
-4.upper():
+---->4.upper():
 SELECT 
     shipping_id, 
     status, 
@@ -132,7 +132,7 @@ SELECT
     UPPER(status) AS status_upper
 FROM 
     Shippings;
-5.lower():
+---->5.lower():
 SELECT 
     shipping_id, 
     status, 
@@ -140,7 +140,7 @@ SELECT
     LOWER(status) AS status_lower
 FROM 
     Shippings;
-6.replace():
+---->6.replace():
 SELECT 
     shipping_id, 
     status, 
@@ -148,7 +148,7 @@ SELECT
     REPLACE(status, 'Pending', 'In Progress') AS updated_status
 FROM 
     Shippings;
-7.trim(),ltrim(),rtrim():
+---->7.trim(),ltrim(),rtrim():
 SELECT 
     shipping_id, 
     status, 
@@ -156,7 +156,7 @@ SELECT
     TRIM(status) AS trimmed_status
 FROM 
     Shippings;
-8.reverse():
+---->8.reverse():
 SELECT 
     shipping_id, 
     status, 
@@ -164,7 +164,7 @@ SELECT
     REVERSE(status) AS reversed_status
 FROM 
     Shippings;
-9.Lpad(),rpad():
+---->9.Lpad(),rpad():
 SELECT 
     shipping_id, 
     status, 
@@ -174,36 +174,36 @@ FROM
     Shippings;
 
 
-->3)aggregare functions():
-1.count():
+---->3)aggregare functions():
+---->1.count():
 SELECT 
     COUNT(*) AS total_customers
 FROM 
     Customers;
-2.sum():
+---->2.sum():
 SELECT 
     SUM(age) AS total_age
 FROM 
     Customers;
-3avg():
+---->3.avg():
 SELECT 
     AVG(age) AS average_age
 FROM 
     Customers;
-4.max(),min():
+---->4.max(),min():
 SELECT 
     MIN(age) AS youngest_age, 
     MAX(age) AS oldest_age
 FROM 
     Customers;
 
-5.mode():
+---->5.mode():
 SELECT 
     mode(age) AS mode_age
 FROM 
     Customers;
 
-6.median():
+---->6.median():
 SELECT 
     median(age) AS median_age
 FROM 
