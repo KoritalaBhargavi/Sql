@@ -1,13 +1,13 @@
 --->Combining Tables with SQL
 
 -->JOIN
-->joining 2 tables
-ex:
+---->joining 2 tables
+---->ex:
 select * from orders join subscriptions
 on orders.subscription_id=subscriptions.subscription_id;
 
-->using where after joining
-ex:
+-->using where after joining
+---->ex:
 SELECT *
 FROM orders
 JOIN subscriptions
@@ -16,29 +16,29 @@ WHERE subscriptions.description = 'Fashion Magazine';
 
 
 -->INNER JOIN
-ex:
+---->ex:
 select count(*) from newspaper;
 select count(*) from online;
 select count(*) from newspaper join online
 on newspaper.id=online.id;
 
 -->LEFT JOIN
-A left join will keep all rows from the first table, regardless of whether there is a matching row in the second table.
-ex:
+---->A left join will keep all rows from the first table, regardless of whether there is a matching row in the second table.
+---->ex:
 SELECT *
 FROM newspaper
 LEFT JOIN online
   ON newspaper.id = online.id;
 
 -->INNER JOIN
-->PRIMARY KEY VS FOREIGN KEY
+-->PRIMARY KEY VS FOREIGN KEY
 
-ex:
+---->ex:
 select * from classes inner join students
 on classes.id=students.class_id;
 
 -->CROSS JOIN
-ex:
+---->ex:
 SELECT month,
    COUNT(*) AS 'subscribers'
 FROM newspaper
@@ -48,7 +48,7 @@ WHERE start_month <= month
 GROUP BY month;
 
 -->UNION
-ex:
+---->ex:
 select *
 from newspaper 
 union
@@ -56,7 +56,7 @@ select *
 from online;
 
 -->WITH
-ex:
+---->ex:
 WITH previous_query AS (
    SELECT customer_id,
       COUNT(subscription_id) AS 'subscriptions'
@@ -69,35 +69,27 @@ FROM previous_query
 JOIN customers
   ON previous_query.customer_id = customers.customer_id;
 
--->SUMMARY
-Let’s summarize what we’ve learned so far:
+/*SUMMARY
+---->Let’s summarize what we’ve learned so far:
 
     Preview: Docs Returns all rows that have matching values in both tables and omits non-matching rows.
     JOIN
     will combine rows from different tables if the join condition is true.
-
-    Preview: Docs Loading link description
     LEFT JOIN
     will return every row in the left table, and if the join condition is not met, NULL values are used to fill in the columns from the right table.
-
-    Preview: Docs Loading link description
     Primary key
     is a column that serves a unique identifier for the rows in the table.
 
-    Preview: Docs Loading link description
     Foreign key
     is a column that contains the primary key to another table.
-
-    Preview: Docs Loading link description
+      
     CROSS JOIN
     lets us combine all rows of one table with all rows of another table.
 
-    Preview: Docs Loading link description
     UNION
     stacks one dataset on top of another.
 
-    Preview: Docs Loading link description
     WITH
-    allows us to define one or more temporary tables that can be used in the final query.
+    allows us to define one or more temporary tables that can be used in the final query.*/
 
 
