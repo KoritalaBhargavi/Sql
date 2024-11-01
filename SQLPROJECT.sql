@@ -7,8 +7,8 @@ SELECT * FROM cars;
 ---->What are the column names?
 
 ---->2.What’s the primary key of trips?-->id
-What’s the primary key of riders?-->id
-What’s the primary key of cars?-->id
+-->What’s the primary key of riders?-->id
+-->What’s the primary key of cars?-->id
 
 ---->3.Try out a simple cross join between riders and cars.Is the result useful?
 ---->query:
